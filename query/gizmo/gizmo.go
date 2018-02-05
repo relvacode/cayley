@@ -382,3 +382,8 @@ func (s *Session) Results() (interface{}, error) {
 func (s *Session) Clear() {
 	s.dataOutput = nil
 }
+
+// Runtime returns the goja JavaScript runtime used by this Gizmo session.
+func (s *Session) Runtime() *goja.Runtime {
+	return s.vm
+}
